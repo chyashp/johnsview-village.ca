@@ -66,7 +66,6 @@
 
         .dropdown {
           position: absolute;
-          top: 100%;
           left: 0;
           background-color: white;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -89,7 +88,6 @@
 
           .child-dropdown {
             position: relative;
-            left: 100%;
             top: 0;
             display: none;
             background-color: #fff;
