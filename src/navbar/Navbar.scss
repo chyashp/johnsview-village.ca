@@ -1,0 +1,158 @@
+.navbar {
+  background-color: #048943;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar stays above other content */
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    background-color: white;
+    color: #048943;
+
+    .left {
+      flex: 2;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      background-color: white;
+      color: #048943;
+      justify-content: flex-start;
+
+      img {
+        height: 100px;
+        width: auto;
+        object-fit: cover;
+      }
+      .home-title {
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      flex: 3;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+      font-weight: 500;
+
+      .links {
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 20px;
+        font-size: 18px;
+        cursor: pointer;
+        position: relative;
+
+        .home,
+        .contactUs .ourCommunity,
+        .ourCorporation {
+          position: relative;
+          padding: 10px 15px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: white;
+            color: #048943;
+          }
+        }
+
+        .dropdown {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: white;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+          z-index: 10;
+          display: none;
+
+          .dropdown-item {
+            padding: 10px 15px;
+            white-space: nowrap;
+            cursor: pointer;
+            color: #048943;
+
+            &:hover {
+              background-color: #048943;
+              color: white;
+              border: #048943;
+              border-color: black;
+            }
+          }
+
+          .child-dropdown {
+            position: relative;
+            left: 100%;
+            top: 0;
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1001;
+
+            .child-dropdown-item {
+              padding: 5px 10px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #e0e0e0;
+              }
+            }
+          }
+
+          &:hover .child-dropdown {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        .home:hover .dropdown,
+        .ourCommunity:hover .dropdown,
+        .ourCorporation:hover .dropdown {
+          display: block;
+        }
+      }
+
+      .login-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+
+        .welcome-message {
+          font-size: 16px;
+          font-weight: bold;
+          color: #048943;
+        }
+
+        .button-shared {
+          font-size: 18px;
+          margin: 15px;
+          margin-left: 10px;
+          border-radius: 5px;
+          height: 40px;
+          width: 120px;
+          background-color: #048943;
+          color: white;
+          border-style: none;
+          cursor: pointer;
+
+          &:hover {
+            background-color: white;
+            color: #048943;
+            border: 1px solid #048943;
+          }
+        }
+      }
+    }
+  }
+}

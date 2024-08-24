@@ -1,0 +1,161 @@
+.contact {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* Restrict the main container to 100vh */
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent overflow of the main container */
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .container {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1400px;
+    flex: 1; /* Allows the container to fill remaining space */
+    overflow: hidden;
+
+    .left,
+    .right {
+      flex: 1; /* Ensure equal width */
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      overflow: hidden; /* Prevent overflow in both sides */
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      overflow-y: auto; /* Allow content to scroll if it exceeds the available height */
+
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      .address {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .emergencyContacts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .officeHours {
+        margin-top: 20px;
+
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+        }
+
+        table {
+          width: 100%;
+          td {
+            padding: 10px;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      overflow-y: auto; /* Allow content to scroll if it exceeds the available height */
+
+      .formContainer {
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+          margin-top: 0;
+          padding-top: 0;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .form-group {
+            display: flex;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            label {
+              font-weight: bold;
+              display: block;
+              margin-bottom: 5px;
+            }
+
+            input,
+            select,
+            textarea {
+              width: auto;
+              padding: 10px;
+              font-size: 1rem;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+            }
+
+            textarea {
+              resize: vertical;
+            }
+          }
+
+          .form-group.checkbox-group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            input {
+              width: auto;
+              margin-right: 10px;
+            }
+
+            label {
+              margin: 0;
+            }
+          }
+
+          button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+              background-color: #0056b3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

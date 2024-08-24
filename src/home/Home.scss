@@ -1,0 +1,36 @@
+.home {
+  overflow: hidden;
+  .wrapper {
+    background: linear-gradient(360deg, #62f0a5, #048943);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh);
+    gap: 50px;
+
+    img {
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .textBox {
+      width: 50%;
+      color: white;
+
+      .title {
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+
+      .text {
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

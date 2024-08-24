@@ -1,0 +1,79 @@
+.OurCorporation {
+  height: 100vh;
+  overflow: hidden;
+
+  .wrapper1 {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+
+    .imgContainer {
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        width: 100%; /* Full width of the container */
+        height: 100%; /* Full height of the container */
+        object-fit: cover; /* Ensure the image covers the container */
+        opacity: 0.25;
+        z-index: -1;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Blackish tint */
+        z-index: -1; /* Keeps it behind the content */
+      }
+    }
+
+    .textContainer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Adjust for centering */
+      padding: 20px; /* Add padding for better spacing */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      max-width: 1200px;
+      color: black;
+      background: rgba(255, 255, 255, 0.5);
+      //   z-index: 2;
+      .title {
+        font-size: 30px; /* Example title font size */
+        margin-bottom: 20px; /* Space below the title */
+        text-align: center;
+      }
+
+      .text {
+        margin: 0;
+        padding: 0;
+        font-size: 20px; /* Example body text size */
+        font-weight: 525;
+        text-align: left; /* Center text alignment */
+        line-height: 1.6; /* Improve readability */
+        width: 100%;
+      }
+
+      .bulletPoints {
+        list-style-type: disc;
+        margin: 20px 0;
+        padding-left: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+        column-gap: 20px; /* Space between columns */
+
+        li {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+}
